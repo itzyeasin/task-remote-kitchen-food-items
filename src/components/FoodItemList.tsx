@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import FoodItemCard from './FoodItemCard';
-import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -8,7 +7,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { FoodItem } from '../types/FoodItem';
-
 import foodData from '../data/foodData.json';
 
 const FoodItemList: React.FC = () => {
@@ -58,9 +56,12 @@ const FoodItemList: React.FC = () => {
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Food Items</h1>
-        <Button variant="contained" color="primary" onClick={handleAddItem}>
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+          onClick={handleAddItem}
+        >
           Add New Item
-        </Button>
+        </button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {items.map((item) => (
@@ -73,7 +74,9 @@ const FoodItemList: React.FC = () => {
         ))}
       </div>
       <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>{editMode ? 'Edit Item' : 'Add New Item'}</DialogTitle>
+        <DialogTitle color="primary" fontWeight={'bold'}>
+          {editMode ? 'Edit Item' : 'Add New Item'}
+        </DialogTitle>
         <DialogContent>
           <DialogContentText>
             {editMode
@@ -123,12 +126,18 @@ const FoodItemList: React.FC = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setOpen(false)} color="secondary">
+          <button
+            className="px-4 py-2 text-sm bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-300"
+            onClick={() => setOpen(false)}
+          >
             Cancel
-          </Button>
-          <Button onClick={handleSaveItem} color="primary">
+          </button>
+          <button
+            className="px-4 py-2 text-sm bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors duration-300"
+            onClick={handleSaveItem}
+          >
             {editMode ? 'Save' : 'Add'}
-          </Button>
+          </button>
         </DialogActions>
       </Dialog>
     </div>

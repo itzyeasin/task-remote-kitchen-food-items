@@ -6,7 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { FoodItem } from '../types/FoodItem';
-
 interface FoodItemCardProps {
   item: FoodItem;
   onDelete: (id: number) => void;
@@ -38,6 +37,8 @@ const FoodItemCard: React.FC<FoodItemCardProps> = ({
           variant="h5"
           component="div"
           className="font-semibold"
+          color="primary"
+          fontWeight={'bold'}
         >
           {item.name}
         </Typography>
@@ -64,16 +65,18 @@ const FoodItemCard: React.FC<FoodItemCardProps> = ({
         </Typography>
       </CardContent>
       <CardActions className="flex justify-between p-2">
-        <Button size="small" color="primary" onClick={() => onEdit(item)}>
+        <button
+          className="px-2 py-1 text-sm bg-white text-black rounded-md border border-black hover:bg-gray-200 transition-colors duration-300"
+          onClick={() => onEdit(item)}
+        >
           Edit
-        </Button>
-        <Button
-          size="small"
-          color="secondary"
+        </button>
+        <button
+          className="px-2 py-1 text-sm bg-white text-black rounded-md border border-black hover:bg-gray-200 transition-colors duration-300"
           onClick={() => onDelete(item.id)}
         >
           Delete
-        </Button>
+        </button>
       </CardActions>
     </Card>
   );
