@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "description": "Delicious pizza with cheese and toppings.",
+    "price": 12.99,
+    "img": "/images/pizza.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Burger",
+    "description": "Juicy burger with lettuce, tomato, and beef patty.",
+    "price": 9.99,
+    "img": "/images/burger.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Salad",
+    "description": "Fresh salad with mixed greens and dressing.",
+    "price": 7.99,
+    "img": "/images/salad.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "Pasta",
+    "description": "Classic pasta with marinara sauce and parmesan cheese.",
+    "price": 11.99,
+    "img": "/images/pasta.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sushi",
+    "description": "Assorted sushi rolls with fresh fish and rice.",
+    "price": 15.99,
+    "img": "/images/sushi.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Steak",
+    "description": "Grilled steak cooked to perfection with mashed potatoes and vegetables.",
+    "price": 19.99,
+    "img": "/images/steak.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tacos",
+    "description": "Authentic Mexican tacos with seasoned meat, salsa, and guacamole.",
+    "price": 10.99,
+    "img": "/images/tacos.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Fish and Chips",
+    "description": "Crispy fish fillets served with fries and tartar sauce.",
+    "price": 13.99,
+    "img": "/images/fish-and-chips.jpg"
+  }
+]
